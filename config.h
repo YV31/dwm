@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "" };
+static const char *tags[] = { "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -34,7 +34,7 @@ static const Rule rules[] = {
 	 */
 	/* class  instance    title       tags mask     isfloating   monitor */
 	{ "Gimp", NULL,        NULL,       0,            1,           -1 },
-	{ NULL  , "Navigator", NULL,       1 << 2,       0,           -1 },
+	{ NULL  , "Navigator", NULL,       1 << 3,       0,           -1 },
 };
 
 /* layout(s) */
@@ -106,9 +106,10 @@ static Key keys[] = {
 	{ MODKEY,           XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask, XK_minus,  setgaps,        {.i = GAP_RESET } },
 	{ MODKEY|ShiftMask, XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
-	TAGKEYS(            XK_1,                      0)
-	TAGKEYS(            XK_2,                      1)
-	TAGKEYS(            XK_3,                      2)
+	TAGKEYS(            XK_apostrophe,             0)
+	TAGKEYS(            XK_1,                      1)
+	TAGKEYS(            XK_2,                      2)
+	TAGKEYS(            XK_3,                      3)
 	{ MODKEY|ShiftMask, XK_q,      quit,           {0} },
 };
 
